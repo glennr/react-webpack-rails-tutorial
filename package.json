@@ -9,7 +9,8 @@
   },
   "scripts": {
     "postinstall": "cd client && npm install",
-    "test": "rspec && (cd client && npm run lint)"
+    "test": "rspec && npm run test:client",
+    "test:client": "(cd client && npm run test --silent && npm run eslint --silent)"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,11 @@
     "url": "https://github.com/shakacode/react-webpack-rails-tutorial/issues"
   },
   "homepage": "https://github.com/shakacode/react-webpack-rails-tutorial",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "chai-immutable": "^1.4.0",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.3"
+  }
 }
