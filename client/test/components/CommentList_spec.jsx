@@ -1,10 +1,7 @@
-/* beautify ignore:start */
-// pending https://github.com/beautify-web/js-beautify/issues/382
 import { React, expect, TestUtils } from '../test_helper';
 import { List, Map } from 'immutable';
 import CommentList from '../../app/components/CommentList';
 import Comment from '../../app/components/Comment';
-/* beautify ignore:end */
 
 const {
   renderIntoDocument,
@@ -26,10 +23,7 @@ describe('CommentList', () => {
 
   it('renders a list of Comments in reverse order', () => {
     const component = renderIntoDocument(
-      /* beautify preserve:start */
-        // js-prettify doesnt like the $$ in jsx
-        <CommentList $$comments={comments}/>
-        /* beautify preserve:end */
+      <CommentList $$comments={comments}/>
     );
     const list = scryRenderedComponentsWithType(component, Comment);
     expect(list.length).to.equal(2);
@@ -39,9 +33,7 @@ describe('CommentList', () => {
 
   it('renders an alert if errors', () => {
     const component = renderIntoDocument(
-      /* beautify preserve:start */
       <CommentList $$comments={comments} error="zomg" />
-      /* beautify preserve:end */
     );
 
     const alert = findRenderedDOMComponentWithTag(component, 'strong');

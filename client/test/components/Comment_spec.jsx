@@ -1,8 +1,5 @@
-/* beautify ignore:start */
-// pending https://github.com/beautify-web/js-beautify/issues/382
 import { React, expect, TestUtils } from '../test_helper';
 import Comment from '../../app/components/Comment';
-/* beautify ignore:end */
 
 const {
   renderIntoDocument,
